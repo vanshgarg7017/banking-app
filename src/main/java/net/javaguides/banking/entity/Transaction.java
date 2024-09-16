@@ -33,7 +33,6 @@ public class Transaction {
 
     public Transaction(Long id, double amount, String type, LocalDateTime timestamp) {
     }
-
     // Getters and Setters
     public Long getId() {
         return id;

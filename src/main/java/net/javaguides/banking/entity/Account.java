@@ -21,12 +21,16 @@ public class Account {
 
     @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Transaction> transactions;
-
+    public Account(Long id) {
+        this.id = id;
+    }
     public Account(Long id, String accountHolderName, double balance) {
         this.id = id;
         this.accountHolderName = accountHolderName;
         this.balance = balance;
     }
+
+
 
     // Getters and setters
     public Long getId() {

@@ -23,7 +23,8 @@ public class TransactionMapper {
                 transaction.getId(),
                 transaction.getAmount(),
                 transaction.getType().name(),
-                transaction.getTimestamp()
+                transaction.getTimestamp(),
+                transaction.getId()
         );
         return transactionDto;
     }

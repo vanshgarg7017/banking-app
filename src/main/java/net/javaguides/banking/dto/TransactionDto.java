@@ -11,13 +11,16 @@ public class TransactionDto {
     private double amount;
     private String type;
     private LocalDateTime timestamp;
+    private Long accountId;
 
-    public TransactionDto(Long id, double amount, String type, LocalDateTime timestamp) {
+    public TransactionDto(Long id, double amount, String type, LocalDateTime timestamp,Long accountId) {
         this.id = id;
         this.amount = amount;
         this.type = type;
         this.timestamp = timestamp;
+        this.accountId = accountId;
     }
+
 
     public Long getId() {
         return id;
@@ -29,6 +32,10 @@ public class TransactionDto {
 
     public double getAmount() {
         return amount;
+    }
+
+    public Long getAccountId() {
+        return accountId;
     }
 
     public void setAmount(double amount) {
@@ -51,4 +58,7 @@ public class TransactionDto {
         this.timestamp = timestamp;
     }
 
+    public void setAccountId(Long accountId) {
+        this.accountId = accountId;
+    }
 }
